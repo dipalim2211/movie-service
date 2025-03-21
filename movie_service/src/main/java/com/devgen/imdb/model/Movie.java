@@ -2,12 +2,12 @@ package com.devgen.imdb.model;
 
 public class Movie {
 
-    private int id;         //realTime:long
+    private long id;         //realTime:long
     private String name;
     private String genre;   //action,sci-fi,drama
     private int year ;      //Requirement
 
-    public Movie(int id, String name, String genre, int year) {
+    public Movie(long id, String name, String genre, int year) {
         this.id = id;
         this.name = name;
         this.genre = genre;
@@ -15,7 +15,7 @@ public class Movie {
     }
 
 
-    public int getId() {
+    public long getId() {
         return id;
     }
 

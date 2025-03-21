@@ -8,11 +8,7 @@ public class MovieService {
 
     //Provide API : ADD/DELETE/UPDATE/READ
 
-    //DataStructure Used : MAP
-
     private HashMap<Long, Movie> movieMap;
-
-    //SystemGenerated ID
 
     private long idCounter;
 
@@ -22,11 +18,11 @@ public class MovieService {
         idCounter=1;
     }
 
-    //ReturnType:Movie -> After Add you can pass movie Object to add movie with ID
+    // ADD API
 
     public Movie addMovie(String name , String genre ,int year)
     {
-        Movie movie = new Movie(1,name,genre,year);
+        Movie movie = new Movie(idCounter,name,genre,year);
 
         //Maintain Movie
         movieMap.put(idCounter,movie);
@@ -35,4 +31,15 @@ public class MovieService {
 
     }
 
+    //API to get Movie data on ID
+
+    public Movie getMovieByID(long id){
+        return movieMap.get(id);
+    }
+
+    //Read All movie from mapMovie and return List<Movie>
+
+    public List<Movie> getAllMovies(){
+
+    }
 }

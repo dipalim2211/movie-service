@@ -8,17 +8,21 @@ public class MovieServiceClient
 
     public static void main(String[] args) {
 
-        /*
-        Movie movie = new Movie(1,"hey baby","Comedy",2005);
-        System.out.println(movie);
-         */
-
-        //add Movie
+        //Create Movie
 
         MovieService movieService = new MovieService();
-        Movie movie=movieService.addMovie("hey baby","Comedy",2005);   //addMovie:Return movie object
+        movieService.addMovie("hey baby","Comedy",2005);
+        movieService.addMovie("Inception","Sci-fi",2008);
+        movieService.addMovie("Interstellar","Sci-Fi",2014);
+        movieService.addMovie("Parasite","Thriller",2019);
+        movieService.addMovie("Chava","Historical",2025);
+
+        //Read Movie
+
+        Movie movie=movieService.getMovieByID(4);
 
         System.out.println(movie);
+
 
     }
 
