@@ -31,6 +31,19 @@ public class Movie {
         return year;
     }
 
+    //Setter Methode to Update Information
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setGenre(String genre) {
+        this.genre = genre;
+    }
+
+    public void setYear(int year) {
+        this.year = year;
+    }
 
     //To print Movie Information
     @Override
@@ -40,6 +53,7 @@ public class Movie {
                 ", Name = '" + name + '\'' +
                 ", genre = '" + genre + '\'' +
                 ", Year = " + year +
-                '}';
+                '}'+"\n";
+
     }
 }
